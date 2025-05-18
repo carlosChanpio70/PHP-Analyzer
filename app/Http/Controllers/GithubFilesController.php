@@ -82,7 +82,7 @@ class GithubFilesController extends Controller {
                         echo json_encode(['error' => $msg['text']]);
                     }
                 }
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 $msg['text'] = "An error occurred";
                 $msg['type'] = "error";
                 if($request->path() == "github") {

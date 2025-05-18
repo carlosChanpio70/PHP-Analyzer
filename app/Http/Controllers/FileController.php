@@ -89,7 +89,7 @@ class FileController extends Controller {
             }
             fclose($fn);
             return $file_content;
-        } catch (Illuminate\Contracts\Filesystem\FileNotFoundException $exception) {
+        } catch (\Exception $exception) {
             return "File Not Found!";
         }
     }
